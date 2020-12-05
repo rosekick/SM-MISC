@@ -301,8 +301,8 @@ public Action projectile(Handle timer, Handle datapack)
 {
 	int entity = ReadPackCell(datapack);
 	int client = GetEntPropEnt(entity, Prop_Send, "m_hThrower");
-	
-	if (IsPlayerAlive(client))
+
+	if(IsPlayerAlive(client))
 	{
 		if(0 < client <= MaxClients)
 		{
@@ -315,7 +315,7 @@ public Action projectile(Handle timer, Handle datapack)
 			TE_SetupBeamFollow(entity, gI_BeamSprite, 0, 1.0, 3.0, 3.0, 1, color);
 			TE_SendToAll();
 		}
-    }
+	}
 }
 
 bool IsValidClient(int client)
