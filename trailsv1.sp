@@ -304,8 +304,8 @@ public Action projectile(Handle timer, Handle datapack)
 	
 	if (IsPlayerAlive(client))
 	{
-        if(0 < client <= MaxClients)
-        {
+		if(0 < client <= MaxClients)
+		{
 			char classname[30];
 			ReadPackString(datapack, classname, sizeof(classname));
 			
@@ -314,7 +314,7 @@ public Action projectile(Handle timer, Handle datapack)
 			
 			TE_SetupBeamFollow(entity, gI_BeamSprite, 0, 1.0, 3.0, 3.0, 1, color);
 			TE_SendToAll();
-        }
+		}
     }
 }
 
