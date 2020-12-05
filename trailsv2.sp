@@ -390,7 +390,7 @@ public int Menu_Handler(Menu menu, MenuAction action, int param1, int param2)
 public void OnEntityCreated(int entity, const char[] classname)
 {
     if (IsValidEntity(entity))
-	{
+    {
         if(StrContains(classname, "_projectile", false) != -1)
         {
             int client = GetEntPropEnt(entity, Prop_Send, "m_hThrower");
@@ -419,7 +419,7 @@ public void OnEntityCreated(int entity, const char[] classname)
 public void OnEntityDestroyed(int entity)
 {
     if (IsValidEntity(entity))
-	{
+    {
         char classname[32];
         GetEdictClassname(entity, classname, 32);
 
