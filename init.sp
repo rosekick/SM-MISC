@@ -111,10 +111,10 @@ public void SQL_FindTier_Callback(Database db, DBResultSet results, const char[]
 
 	while(results.FetchRow())
 	{
-	char map[128];
-	results.FetchString(0, map, 128);
-	gA_Map.PushString(map);
-	gA_Maptier.Push(results.FetchInt(1));
+		char map[128];
+		results.FetchString(0, map, 128);
+		gA_Map.PushString(map);
+		gA_Maptier.Push(results.FetchInt(1));
 	}
 }
 
